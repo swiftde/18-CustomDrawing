@@ -37,6 +37,9 @@ class ViewController: UIViewController {
         
         // Spielbutton ausblenden
         button.hidden = true
+        
+        // Button rundgestalten (// am Anfang entfernen, um dies zu aktivieren)
+        //button.layer.cornerRadius = button.frame.size.height/2
         view.addSubview(button)
     }
     
