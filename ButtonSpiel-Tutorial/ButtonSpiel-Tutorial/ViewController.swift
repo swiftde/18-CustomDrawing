@@ -100,11 +100,11 @@ class ViewController: UIViewController {
     
     // Zufällige Farbe für den Button erstellen
     func randomBackgroundColorForButton() -> UIColor {
-        let redValue = CGFloat(rand() % 255) / 255
-        let greenValue = CGFloat(rand() % 255) / 255
-        let blueValue = CGFloat(rand() % 255) / 255
+        let redValue = Float(rand() % 255) / 255
+        let greenValue = Float(rand() % 255) / 255
+        let blueValue = Float(rand() % 255) / 255
         
-        return UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: 1)
+        return UIColor(red: CGFloat(redValue), green: CGFloat(greenValue), blue: CGFloat(blueValue), alpha: 1)
     }
 
 
