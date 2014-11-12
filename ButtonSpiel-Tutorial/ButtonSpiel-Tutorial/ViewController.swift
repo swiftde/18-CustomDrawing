@@ -24,8 +24,8 @@ class ViewController: UIViewController {
     var zaehler = 0
     
     // Zeitdifferenz stellt nach einem Spiel die Leistung dar
-    var startTime = NSDate.date()
-    var endTime = NSDate.date()
+    var startTime = NSDate()
+    var endTime = NSDate()
     
     override func viewDidLoad() {
         // Position, Titel, Hintergrundfarbe und Action zuweisen
@@ -56,7 +56,7 @@ class ViewController: UIViewController {
         button.hidden = false
         button.addTarget(self, action: "buttonPressed:", forControlEvents: .TouchUpInside)
         // Startzeit setzen
-        startTime = NSDate.date()
+        startTime = NSDate()
     }
     
     func buttonPressed(sender: UIButton!) {
@@ -64,7 +64,7 @@ class ViewController: UIViewController {
         zaehler++
         // Wenn die nötigen Taps für Beenden des Spiels erreicht wurden
         if zaehler >= ANZAHL_TAPS {
-            endTime = NSDate.date()
+            endTime = NSDate()
             zaehler = 0
             button.hidden = true
             newGameButton.hidden = false
